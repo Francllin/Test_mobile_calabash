@@ -1,0 +1,50 @@
+    raise "No elements found. Query: #{query_string}" if element.nil?
+    width = element['rect']['width']
+    height = element['rect']['height']
+    if direction == :up
+      scroll_y = -height/2
+    else
+      scroll_y = height/2
+    end
+    query(query_string, {scrollBy: [scroll_x.to_i, scroll_y.to_i]})
+  end
+  when_element_exists(query_string, action: action)
+end
+scroll(0 800, :down)
+scroll(0, 800, :down)
+@valor = [0, 800]
+scroll(@valor, :down)
+scroll([10, 800], :down)
+scroll(:down)
+scroll_to(0, :down)
+scroll_to(0, 800)
+scroll_to([0, 20], :down)
+scroll_to([0, 20])
+scroll_to()
+query(:stringByEvaluatingJavaScriptFromString 'window.scroll_to(0, 800)')
+evaluate_javascript("window.scrollTo(0, 1600)")
+evaluate_javascript('window.scrollTo(0, 1600)')
+  perform_action('execute_javascript',"window.scrollTo(0, 1600)")
+  perform_action('execute_javascript',"window.scrollTo(0, 1600)")
+  perform_action('execute_javascript',"window.scrollTo(0, 1600)")
+evaluate_javascript('execute_javascript', "window.scrollTo(0, 1600)")
+start_test_server_in_background
+start_test_server_in_background
+exit
+
+start_test_server_in_background
+start_test_server_in_background
+query("android.widget.CheckBox", :checked)
+query("android.widget.CheckBox id:'termCB'", :checked)
+touch("android.widget.CheckBox id:'termCB'", :checked)
+touch(query("android.widget.CheckBox id:'termCB'", :checked))
+touch(query("android.widget.CheckBox id:'termCB'"))
+start_test_server_in_background
+touch("android.widget.Button id:'registerBTN'")
+query("android.widget.EditText id:'emailETX'", setText: "@email")
+start_test_server_in_background
+touch(query("android.support.v7.widget.AppCompatTextView")[1])
+query("* marked:'Masculino'")
+touch(query("android.support.v7.widget.AppCompatTextView")[1])
+touch(query("* marked:'Masculino'"))
+exit
